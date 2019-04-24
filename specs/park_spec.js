@@ -96,12 +96,12 @@ describe('Park', function() {
     assert.strictEqual(actual, 2)
   });
 
-  // it('should be able to return an object with diet and number of dinosaurs with each diet', function(){
-  //   park.addDino(dinosaur)
-  //   park.addDino(dinosaur2)
-  //   park.addDino(dinosaur2)
-  //   const actual = park.diets()
-  //   assert.deepStrictEqual(actual, { 'carnivore': 1, 'herbivore': 2 })
-  // })
+  it('should be able to return an object with diet and number of dinosaurs with each diet', function(){
+    park.addDino(dinosaur)
+    park.addDino(dinosaur2)
+    park.addDino(dinosaur2)
+    const actual = park.diets()
+    assert.deepStrictEqual(actual, { 'carnivore': 1, 'herbivore': 2 })
+  })
 
 });

@@ -70,9 +70,18 @@ Park.prototype.removeBySpecies = function(species){
   this.dinosaurs = temp;
 };
 
-// Park.prototype.diets = function(){
-//
-// };
+Park.prototype.diets = function(){
+  let dietCount = [];
+  for(dino of this.dinosaurs){
+    dietCount.push(dino.diet);
+  }
+  let dietsByType = {};
+  for(let i = 0; i < dietCount.length; i++){
+    let num = dietCount[i];
+    dietsByType[num] = dietsByType[num] ? dietsByType[num] +1 : 1;
+  }
+  return dietsByType;
+};
 
 
 
